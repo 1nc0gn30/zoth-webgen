@@ -105,6 +105,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
   const [tab, setTab] = useState<'motion' | 'clone' | 'composer' | 'pixel' | 'svg' | 'iconify' | 'media'>('motion');
   const [iconQuery, setIconQuery] = useState('rocket');
   const [iconCollection, setIconCollection] = useState('pixelarticons');
+
   const [iconResults, setIconResults] = useState<string[]>([
     'pixelarticons:zap',
     'pixelarticons:heart',
@@ -119,6 +120,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
     'lucide:rocket',
     'lucide:terminal',
   ]);
+
   const [searching, setSearching] = useState(false);
   const [diceSeed, setDiceSeed] = useState('ZothBolt');
 
@@ -135,6 +137,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
     'monetization-funnel',
     'aeo-faq',
   ]);
+
   const [selectedTokenPreset, setSelectedTokenPreset] = useState<string>('sovereign-gold');
 
   if (!isOpen) {
@@ -154,9 +157,11 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
 
     try {
       const prefixParam = iconCollection === 'all' ? '' : `&prefix=${encodeURIComponent(iconCollection)}`;
+
       const res = await fetch(
         `https://api.iconify.design/search?query=${encodeURIComponent(iconQuery.trim())}&limit=24${prefixParam}`,
       );
+
       const data = (await res.json()) as { icons?: string[] };
 
       if (data?.icons && data.icons.length > 0) {
@@ -188,6 +193,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url: cloneUrl.trim() }),
       });
+
       const data = (await res.json()) as UrlBlueprintData;
       setBlueprint(data);
       toast.success(`🔍 Deconstructed ${data.title}!`);
@@ -205,6 +211,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
   const handleCompileSectionStack = () => {
     const tokenObj = DESIGN_TOKEN_PRESETS.find((t) => t.id === selectedTokenPreset) || DESIGN_TOKEN_PRESETS[0];
     const chosenBlocks = SECTION_STACK_BLOCKS.filter((b) => selectedSections.includes(b.id));
+
     const compiled = [
       `[ZOTH BOLT FULL-PAGE ARCHITECTURE & DESIGN TOKEN SPEC]`,
       tokenObj.spec,
@@ -243,7 +250,8 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
                 </span>
               </h2>
               <p className="text-xs text-white/60 font-mono">
-                1-click Motion Edit Templates, Live URL Remixing, Relume-Style Section Composer, 16-Bit Pixel Art SVGs, and Iconify/Unsplash Media
+                1-click Motion Edit Templates, Live URL Remixing, Relume-Style Section Composer, 16-Bit Pixel Art SVGs,
+                and Iconify/Unsplash Media
               </p>
             </div>
           </div>
@@ -327,7 +335,8 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
                   🔗 Live URL Deconstructor &amp; Awwwards Upgrade Synthesizer
                 </h3>
                 <p className="text-xs text-white/60 mb-3">
-                  Paste any reference website or competitor URL. Zoth Bolt extracts its headings, navigation, color hex swatches, typography, and AEO readiness, then synthesizes a high-craft redesign prompt.
+                  Paste any reference website or competitor URL. Zoth Bolt extracts its headings, navigation, color hex
+                  swatches, typography, and AEO readiness, then synthesizes a high-craft redesign prompt.
                 </p>
                 <form onSubmit={handleAnalyzeUrl} className="flex flex-wrap gap-2">
                   <input
@@ -384,14 +393,19 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
                     </div>
                     <div className="p-3 rounded-lg bg-black/40 border border-white/10 space-y-2">
                       <div>
-                        <div className="font-mono text-[10px] text-white/50 uppercase mb-1">Detected Palette Swatches</div>
+                        <div className="font-mono text-[10px] text-white/50 uppercase mb-1">
+                          Detected Palette Swatches
+                        </div>
                         <div className="flex items-center gap-2 flex-wrap">
                           {blueprint.colors.map((hex) => (
                             <span
                               key={hex}
                               className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/5 border border-white/10 font-mono text-[11px] text-white"
                             >
-                              <span className="w-3 h-3 rounded-full border border-white/20" style={{ background: hex }} />
+                              <span
+                                className="w-3 h-3 rounded-full border border-white/20"
+                                style={{ background: hex }}
+                              />
                               {hex}
                             </span>
                           ))}
@@ -400,7 +414,9 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
                       <div>
                         <div className="font-mono text-[10px] text-white/50 uppercase mb-1">Detected Typography</div>
                         <div className="text-white/80 font-mono text-[11px]">
-                          {blueprint.fonts.length > 0 ? blueprint.fonts.join(' • ') : 'System Default (Upgrading to Syne + Space Grotesk)'}
+                          {blueprint.fonts.length > 0
+                            ? blueprint.fonts.join(' • ')
+                            : 'System Default (Upgrading to Syne + Space Grotesk)'}
                         </div>
                       </div>
                     </div>
@@ -408,7 +424,9 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
 
                   <button
                     type="button"
-                    onClick={() => injectAndNotify(blueprint.synthesizedPrompt, `Redesign Blueprint for ${blueprint.title}`)}
+                    onClick={() =>
+                      injectAndNotify(blueprint.synthesizedPrompt, `Redesign Blueprint for ${blueprint.title}`)
+                    }
                     className="w-full py-2.5 px-4 rounded-xl bg-[#D4AF37] hover:bg-[#F5E6AB] text-black font-mono text-xs font-extrabold transition-all cursor-pointer"
                   >
                     ⚡ Inject Complete Redesign Blueprint into Zoth Bolt
@@ -461,6 +479,7 @@ export const AssetVaultModal: React.FC<AssetVaultModalProps> = ({ isOpen, onClos
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                   {SECTION_STACK_BLOCKS.map((block) => {
                     const active = selectedSections.includes(block.id);
+
                     return (
                       <button
                         key={block.id}

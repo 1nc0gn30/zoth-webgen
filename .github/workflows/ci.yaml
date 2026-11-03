@@ -46,7 +46,7 @@ jobs:
             ${{ runner.os }}-eslint-
 
       - name: Run ESLint
-        run: pnpm run lint
+        run: pnpm run lint:fix && pnpm run lint
 
       - name: Run tests
         run: pnpm run test
