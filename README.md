@@ -82,7 +82,7 @@ Connect Claude Code, Cursor, Antigravity (`agy`), Cline, or Hermes directly to Z
   "mcpServers": {
     "zoth-bolt": {
       "command": "node",
-      "args": ["/home/zoth/NullAITech/bolt.diy/packages/mcp-server/index.mjs"],
+      "args": ["~/NullAITech/bolt.diy/packages/mcp-server/index.mjs"],
       "env": {
         "WEBGEN_BASE_URL": "http://127.0.0.1:5173"
       }

@@ -73,7 +73,7 @@ function checkTool(name: string, command: string): LocalToolStatus {
     const toolPath = execSync(`which ${command} 2>/dev/null`, {
       env: {
         ...process.env,
-        PATH: `/home/zoth/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
+        PATH: `~/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
       },
     })
       .toString()
@@ -83,7 +83,7 @@ function checkTool(name: string, command: string): LocalToolStatus {
 
     const probeEnv = {
       ...process.env,
-      PATH: `/home/zoth/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
+      PATH: `~/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
     };
     const firstLine = (bin: string, timeout: number) =>
       execSync(bin, { timeout, env: probeEnv }).toString().trim().split('\n')[0];
@@ -196,10 +196,10 @@ export async function action({ request }: ActionFunctionArgs) {
 
     // Extended PATH including local user binaries
     const env = {
-      HOME: process.env.HOME || '/home/zoth',
+      HOME: process.env.HOME || '~',
       USER: process.env.USER || 'zoth',
       ...process.env,
-      PATH: `/home/zoth/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
+      PATH: `~/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
       TERM: 'xterm-256color',
       COLORTERM: 'truecolor',
     };

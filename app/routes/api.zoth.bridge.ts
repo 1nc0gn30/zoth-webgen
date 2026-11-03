@@ -22,7 +22,7 @@ function which(command: string): boolean {
       stdio: 'ignore',
       env: {
         ...process.env,
-        PATH: `/home/zoth/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
+        PATH: `~/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
       },
     });
     return true;

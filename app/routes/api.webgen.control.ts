@@ -127,10 +127,10 @@ export async function action({ request }: ActionFunctionArgs) {
         }
 
         const env = {
-          HOME: process.env.HOME || '/home/zoth',
+          HOME: process.env.HOME || '~',
           USER: process.env.USER || 'zoth',
           ...process.env,
-          PATH: `/home/zoth/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
+          PATH: `~/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ''}`,
           TERM: 'xterm-256color',
         };
 

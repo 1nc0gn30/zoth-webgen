@@ -15,7 +15,7 @@ export const ZothBentoFeatures: React.FC<ZothBentoFeaturesProps> = ({ onSelectCl
       mcpServers: {
         'zoth-bolt': {
           command: 'node',
-          args: ['/home/zoth/NullAITech/bolt.diy/packages/mcp-server/index.mjs'],
+          args: ['~/NullAITech/bolt.diy/packages/mcp-server/index.mjs'],
           env: {
             WEBGEN_BASE_URL: 'http://localhost:5173',
           },

@@ -39,7 +39,7 @@ function stripAnsi(text: string): string {
 }
 
 function findRealOpenCode(): string | null {
-  const homeDir = process.env.HOME || '/home/zoth';
+  const homeDir = process.env.HOME || '~';
 
   const candidates = [
     `${homeDir}/.local/bin/opencode`,
@@ -101,7 +101,7 @@ function formatPromptForCli(prompt: any[]): string {
 }
 
 function resolveExecutable(cmd: string): string {
-  const homeDir = process.env.HOME || '/home/zoth';
+  const homeDir = process.env.HOME || '~';
 
   const candidates = [`${homeDir}/.local/bin/${cmd}`, `/usr/local/bin/${cmd}`, `/usr/bin/${cmd}`];
 
@@ -141,7 +141,7 @@ function createCliLanguageModel(
   runOptions?: { cwd?: string; timeoutMs?: number; binPath?: string; streamFormat?: 'grok-json' },
 ): LanguageModelV1 {
   const binPath = runOptions?.binPath || resolveExecutable(command);
-  const homeDir = process.env.HOME || '/home/zoth';
+  const homeDir = process.env.HOME || '~';
   const userName = process.env.USER || 'zoth';
   const cwd = runOptions?.cwd || process.cwd();
   const timeoutMs = runOptions?.timeoutMs || 0;
@@ -820,7 +820,7 @@ export default class ZothLocalProvider extends BaseProvider {
     const bench = scratchDir();
 
     if (model === 'grok-cli') {
-      const homeDir = process.env.HOME || '/home/zoth';
+      const homeDir = process.env.HOME || '~';
 
       return createCliLanguageModel(
         'grok-cli',

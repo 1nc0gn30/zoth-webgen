@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { LoaderFunctionArgs } from '@remix-run/cloudflare';
 import { json } from '@remix-run/cloudflare';
 
-const MINDS_DIR = '/home/zoth/NullAITech/zoth-civilization/data/minds';
+const MINDS_DIR = '~/NullAITech/zoth-civilization/data/minds';
 const SKIP = /^(SUB_|KEEPER_|daemon|graph|spool|active_)/;
 const MAX_CHARS = 6000;
 
