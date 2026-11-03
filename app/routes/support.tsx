@@ -55,10 +55,10 @@ Steps to Reproduce: `;
                 Reach our team directly for order verification, refunds, enterprise inquiries, or license reactivation.
               </p>
               <a
-                href="mailto:support@nealfrazier.tech"
+                href="mailto:support@1nc0gn30.si"
                 className="inline-block text-xs font-mono font-bold text-[#D4AF37] hover:underline"
               >
-                support@nealfrazier.tech →
+                support@1nc0gn30.si →
               </a>
             </div>
 
@@ -95,7 +95,7 @@ Steps to Reproduce: `;
                 <strong className="text-sm text-[#D4AF37] block">What is the refund process?</strong>
                 <p>
                   We provide a 100% money-back guarantee within 30 days of purchase. Simply email
-                  support@nealfrazier.tech with your receipt, and we will issue a full refund with zero friction.
+                  support@1nc0gn30.si with your receipt, and we will issue a full refund with zero friction.
                 </p>
               </div>
 
@@ -140,7 +140,7 @@ Steps to Reproduce: `;
       </main>
 
       <footer className="mt-auto border-t border-white/10 py-6 text-center text-xs text-bolt-elements-textTertiary">
-        Engineered by Neal Frazier Tech (
+        Engineered by 1nc0gn30 • NullAI (
         <a href="https://github.com/1nc0gn30" className="text-[#D4AF37]">
           @1nc0gn30
         </a>

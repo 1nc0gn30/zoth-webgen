@@ -23,5 +23,5 @@ console.log(`
 console.log('📍 Platform: Zoth Studio & ZothOS • NullAI Engine (v3.0.0)');
 console.log('📍 Lineage: Built on open-source bolt.diy');
 console.log('📍 Commit Hash:', commitJson.hash);
-console.log('📍 Creator: Neal Frazier Tech (@1nc0gn30)');
+console.log('📍 Creator: 1nc0gn30 • NullAI (@1nc0gn30)');
 console.log('★═════════════════════════════════════════════════★');

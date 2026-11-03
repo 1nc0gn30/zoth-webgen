@@ -3,7 +3,7 @@
  * Comprehensive database of 280+ modern frameworks, UI systems, motion engines,
  * typography pairings, and visual FX commodities for autonomous application synthesis.
  *
- * Creator: Neal Frazier Tech (@1nc0gn30) • NullAI Platform
+ * Creator: 1nc0gn30 • NullAI (@1nc0gn30) • NullAI Platform
  */
 
 export interface CatalogItem {

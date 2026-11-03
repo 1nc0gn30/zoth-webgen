@@ -6,7 +6,7 @@
  * Allows any AI agent (Antigravity, Claude Code, Hermes Agent, Cursor)
  * to control Zoth WebGen via standard MCP tool calls.
  *
- * Creator: Neal Frazier Tech (@1nc0gn30) • NullAI Platform
+ * Creator: 1nc0gn30 • NullAI (@1nc0gn30) • NullAI Platform
  */
 
 import readline from 'readline';
@@ -484,7 +484,7 @@ rl.on('line', async (line) => {
           serverInfo: {
             name: 'zoth-webgen-mcp',
             version: '2.0.0',
-            creator: 'Neal Frazier Tech (@1nc0gn30)',
+            creator: '1nc0gn30 • NullAI (@1nc0gn30)',
           },
         },
       };

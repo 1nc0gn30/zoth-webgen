@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
     { title: 'Privacy Policy — Zoth Bolt' },
     {
       name: 'description',
-      content: 'Privacy policy and sovereign client-side data handling for Zoth Bolt by Neal Frazier Tech.',
+      content: 'Privacy policy and sovereign client-side data handling for Zoth Bolt by 1nc0gn30 • NullAI.',
     },
   ];
 };
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
             Privacy Policy & Data Sovereignty
           </h1>
           <p className="text-xs text-bolt-elements-textTertiary font-mono mb-8">
-            Last Updated: October 2026 • Neal Frazier Tech
+            Last Updated: October 2026 • 1nc0gn30 • NullAI
           </p>
 
           <div className="space-y-8 text-sm text-bolt-elements-textSecondary leading-relaxed">
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
               <p>
                 When you input an API key (e.g., Google Gemini, Anthropic, OpenAI) or configure local endpoints (Ollama,
                 LM Studio), network calls originate directly from your local browser environment to your chosen LLM
-                provider. Your credentials are never proxied, harvested, or logged by Neal Frazier Tech.
+                provider. Your credentials are never proxied, harvested, or logged by 1nc0gn30 • NullAI.
               </p>
             </section>
 
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
       </main>
 
       <footer className="mt-auto border-t border-white/10 py-6 text-center text-xs text-bolt-elements-textTertiary">
-        Engineered by Neal Frazier Tech (
+        Engineered by 1nc0gn30 • NullAI (
         <a href="https://github.com/1nc0gn30" className="text-[#D4AF37]">
           @1nc0gn30
         </a>

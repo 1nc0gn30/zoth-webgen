@@ -54,11 +54,11 @@ const schemaJsonLd = {
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'All',
       description:
-        'Universal AI in-browser full-stack application & motion edit architect with 200k+ SVG/pixel-art icons and MCP asset bridges by Neal Frazier Tech.',
+        'Universal AI in-browser full-stack application & motion edit architect with 200k+ SVG/pixel-art icons and MCP asset bridges by 1nc0gn30 • NullAI.',
       creator: {
         '@type': 'Organization',
-        name: 'Neal Frazier Tech',
-        url: 'https://nealfrazier.tech',
+        name: '1nc0gn30 • NullAI',
+        url: 'https://1nc0gn30.si',
       },
     },
     {
@@ -92,7 +92,7 @@ export const Head = createHead(() => (
     <meta property="og:title" content="Zoth Bolt — Full-Stack AI & Motion Architect" />
     <meta
       property="og:description"
-      content="Where Sovereign Software Begins: Autonomous full-stack application architect & WebContainer engine by Neal Frazier Tech."
+      content="Where Sovereign Software Begins: Autonomous full-stack application architect & WebContainer engine by 1nc0gn30 • NullAI."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://webgen.nullai.tech/" />

@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
     { title: 'Zoth Bolt — Git Repository Import' },
     {
       name: 'description',
-      content: 'Import, fork, and architect repositories directly in-browser with Zoth Bolt by Neal Frazier Tech.',
+      content: 'Import, fork, and architect repositories directly in-browser with Zoth Bolt by 1nc0gn30 • NullAI.',
     },
   ];
 };

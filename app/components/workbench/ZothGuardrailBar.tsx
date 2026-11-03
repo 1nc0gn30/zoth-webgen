@@ -59,8 +59,8 @@ export const ZothGuardrailBar: React.FC = () => {
       },
       {
         id: 'ATTRIBUTION',
-        label: 'Neal Frazier Tech (@1nc0gn30) • NullAI Platform',
-        pass: /Neal Frazier Tech|1nc0gn30|NullAI/i.test(combined),
+        label: '1nc0gn30 • NullAI (@1nc0gn30) • NullAI Platform',
+        pass: /1nc0gn30 • NullAI|1nc0gn30|NullAI/i.test(combined),
       },
       {
         id: 'MONETIZATION',
@@ -125,7 +125,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
         if (!/og:title/i.test(html)) {
           headExtras.push(
             '    <meta property="og:title" content="Zoth Bolt Sovereign App" />',
-            '    <meta property="og:description" content="Engineered with Zoth Bolt by Neal Frazier Tech (@1nc0gn30) • NullAI Platform" />',
+            '    <meta property="og:description" content="Engineered with Zoth Bolt by 1nc0gn30 • NullAI (@1nc0gn30) • NullAI Platform" />',
             '    <meta property="og:type" content="website" />',
             '    <meta property="og:image" content="https://zoth.nullai.tech/og-banner.png" />',
             '    <meta name="twitter:card" content="summary_large_image" />',
@@ -144,7 +144,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
                 applicationCategory: 'DeveloperApplication',
                 operatingSystem: 'All',
                 offers: { '@type': 'Offer', price: '19.00', priceCurrency: 'USD' },
-                creator: { '@type': 'Organization', name: 'Neal Frazier Tech', url: 'https://nullai.tech' },
+                creator: { '@type': 'Organization', name: '1nc0gn30 • NullAI', url: 'https://nullai.tech' },
               },
               {
                 '@type': 'FAQPage',
@@ -176,12 +176,12 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
           html = html.replace(/<\/head>/i, `${headExtras.join('\n')}\n  </head>`);
         }
 
-        if (!/Neal Frazier Tech|1nc0gn30/i.test(html) || !/Stripe|Solana|DePay|licensed/i.test(html)) {
+        if (!/1nc0gn30 • NullAI|1nc0gn30/i.test(html) || !/Stripe|Solana|DePay|licensed/i.test(html)) {
           const footerBlock = `
   <!-- Sovereign Attribution & Support Architecture -->
   <footer style="padding:12px 20px;text-align:center;font-family:monospace;font-size:12px;color:#94A3B8;background:#08080B;border-top:1px solid rgba(212,175,55,0.25);">
     <span>✦ 100% Free &amp; Open Access • <a href="https://buy.stripe.com/3cIfZg27PdKo2D64Ocfw40X" target="_blank" rel="noopener" style="color:#D4AF37;">☕ Buy Us a Coffee</a></span> •
-    <span>Engineered by <a href="https://github.com/1nc0gn30" style="color:#D4AF37;">Neal Frazier Tech (@1nc0gn30)</a> • <a href="https://nullai.tech" style="color:#38BDF8;">NullAI Platform</a></span>
+    <span>Engineered by <a href="https://github.com/1nc0gn30" style="color:#D4AF37;">1nc0gn30 • NullAI (@1nc0gn30)</a> • <a href="https://nullai.tech" style="color:#38BDF8;">NullAI Platform</a></span>
   </footer>`;
           html = html.replace(/<\/body>/i, `${footerBlock}\n</body>`);
         }

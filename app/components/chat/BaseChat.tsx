@@ -622,7 +622,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       rel="noreferrer"
                       className="font-medium text-[#D4AF37] hover:text-[#F5E6AB] underline underline-offset-2 transition-colors"
                     >
-                      Neal Frazier Tech (@1nc0gn30)
+                      1nc0gn30 • NullAI (@1nc0gn30)
                     </a>
                     <span>•</span>
                     <a

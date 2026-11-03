@@ -45,7 +45,7 @@ const SCENES = [
   {
     time: '0:13 - 0:15',
     title: 'Scene 6: Branded Resolve',
-    copy: 'ZOTH BOLT • NEAL FRAZIER TECH',
+    copy: 'ZOTH BOLT • 1nc0gn30 • NullAI',
     detail: 'Golden anchor shape docks into Zoth logo lockup with white-hot specular glare.',
     accent: '#F5E6AB',
   },
@@ -83,7 +83,7 @@ Scene Breakdown & Exact On-Screen Copy:
 - Scene 3 (0:05 - 0:08): High-contrast feature blitz. Camera snap zoom into telemetry gauge. Text: "AGY • NOUS HERMES • CLAUDE CODE • OLLAMA"
 - Scene 4 (0:08 - 0:11): 3D isometric perspective shift. Text: "STDIO & SSE BIDIRECTIONAL CONTROL"
 - Scene 5 (0:11 - 0:13): Climax unlock. Paywall blur dissolves into pristine code. Text: "ONE-CLICK LIFETIME ACTIVATION • $19"
-- Scene 6 (0:13 - 0:15): Branded resolve. Hexagon docks into logo. Text: "ZOTH BOLT • Engineered by Neal Frazier Tech (@1nc0gn30)"
+- Scene 6 (0:13 - 0:15): Branded resolve. Hexagon docks into logo. Text: "ZOTH BOLT • Engineered by 1nc0gn30 • NullAI (@1nc0gn30)"
 
 Style & Animation Constraints:
 - Background: Pitch black (#08080B) with subtle ambient mesh glow (#D4AF37 and #00F0FF).

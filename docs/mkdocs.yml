@@ -29,10 +29,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/1nc0gn30/zoth-webgen
-      name: Neal Frazier Tech on GitHub
+      name: 1nc0gn30 • NullAI on GitHub
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/1nc0gn30
-      name: Neal Frazier on X
+      name: 1nc0gn30 on X
 
 markdown_extensions:
   - pymdownx.highlight:

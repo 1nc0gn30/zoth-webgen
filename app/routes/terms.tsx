@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
     { title: 'Terms of Service — Zoth Bolt' },
     {
       name: 'description',
-      content: 'Terms of service and lifetime commercial license terms for Zoth Bolt by Neal Frazier Tech.',
+      content: 'Terms of service and lifetime commercial license terms for Zoth Bolt by 1nc0gn30 • NullAI.',
     },
   ];
 };
@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms of Service & Commercial License
           </h1>
           <p className="text-xs text-bolt-elements-textTertiary font-mono mb-8">
-            Last Updated: October 2026 • Neal Frazier Tech
+            Last Updated: October 2026 • 1nc0gn30 • NullAI
           </p>
 
           <div className="space-y-8 text-sm text-bolt-elements-textSecondary leading-relaxed">
@@ -37,7 +37,7 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-[#D4AF37]">1. Lifetime Commercial License Grant</h2>
               <p>
                 Upon purchasing a lifetime license to <strong>Zoth Bolt</strong> via Stripe or DePay Solana,
-                Neal Frazier Tech grants you a perpetual, non-exclusive, worldwide commercial license to use the
+                1nc0gn30 • NullAI grants you a perpetual, non-exclusive, worldwide commercial license to use the
                 software to architect, generate, compile, and export web applications for personal, commercial, client,
                 and internal enterprise projects.
               </p>
@@ -47,8 +47,7 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-[#D4AF37]">2. 100% Client-Side In-Browser Execution</h2>
               <p>
                 Zoth Bolt operates client-side inside your browser via WebContainer technology. You acknowledge that
-                code execution, AST transformations, and file generation take place locally on your hardware. Neal
-                Frazier Tech does not operate backend servers that host or execute your generated applications.
+                code execution, AST transformations, and file generation take place locally on your hardware. 1nc0gn30 • NullAI does not operate backend servers that host or execute your generated applications.
               </p>
             </section>
 
@@ -59,8 +58,8 @@ export default function TermsPage() {
                 decentralized Web3 smart contracts (Solana SOL / USDC). We honor a unconditional{' '}
                 <strong>30-day money-back guarantee</strong> for any customer unsatisfied with their experience. Simply
                 reach out to{' '}
-                <a href="mailto:support@nealfrazier.tech" className="text-[#D4AF37] underline">
-                  support@nealfrazier.tech
+                <a href="mailto:support@1nc0gn30.si" className="text-[#D4AF37] underline">
+                  support@1nc0gn30.si
                 </a>{' '}
                 with your receipt.
               </p>
@@ -70,15 +69,14 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-[#D4AF37]">4. Ownership of Generated Output</h2>
               <p>
                 You retain 100% complete, unencumbered ownership and intellectual property rights over any source code,
-                media, components, configurations, and applications synthesized or exported through Zoth Bolt. Neal
-                Frazier Tech claims zero royalties, equity, or rights in your creations.
+                media, components, configurations, and applications synthesized or exported through Zoth Bolt. 1nc0gn30 • NullAI claims zero royalties, equity, or rights in your creations.
               </p>
             </section>
 
             <section className="space-y-3">
               <h2 className="text-lg font-bold text-[#D4AF37]">5. Attribution & Heritage</h2>
               <p>
-                Zoth Bolt is engineered by Neal Frazier Tech (@1nc0gn30) as part of the NullAI Platform. The
+                Zoth Bolt is engineered by 1nc0gn30 • NullAI (@1nc0gn30) as part of the NullAI Platform. The
                 platform architecture is inspired by Bolt and WebContainer open-source foundations under the MIT
                 License.
               </p>
@@ -100,7 +98,7 @@ export default function TermsPage() {
       </main>
 
       <footer className="mt-auto border-t border-white/10 py-6 text-center text-xs text-bolt-elements-textTertiary">
-        Engineered by Neal Frazier Tech (
+        Engineered by 1nc0gn30 • NullAI (
         <a href="https://github.com/1nc0gn30" className="text-[#D4AF37]">
           @1nc0gn30
         </a>

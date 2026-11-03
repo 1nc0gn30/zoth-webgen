@@ -2,7 +2,7 @@
 """
 Zoth Bolt (bolt.diy) - Sovereign Local Server & REST API
 Port: 5173
-Engineered by Neal Frazier Tech (@1nc0gn30) • NullAI Platform
+Engineered by 1nc0gn30 • NullAI (@1nc0gn30) • NullAI Platform
 """
 
 import sys
