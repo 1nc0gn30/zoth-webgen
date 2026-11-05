@@ -67,5 +67,21 @@
       document.getElementById("out").textContent = "[ZOTHOS-ENCLAVE] Executed at " + new Date().toISOString() + "\n" + v;
     }
   </script>
+
+  <script src="/sovereign_tutorial.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      if (window.createSovereignTutorial) {
+        window.createSovereignTutorial({
+          toolId: "zoth-webgen",
+          toolName: "Zoth QuickSite Starter",
+          tagline: "Autonomous sovereign website generator and live preview workstation!",
+          accentColor: "#6366F1",
+          steps: [{"icon": "\u26a1", "title": "Websites in 30 Seconds", "desc": "Type what kind of website you want. Zoth WebGen writes the HTML, CSS, JavaScript, and SEO schema live on screen."}, {"icon": "\ud83d\udc41\ufe0f", "title": "Split-Screen Live Preview", "desc": "Watch your website take shape instantly in the side-by-side interactive browser pane."}, {"icon": "\ud83d\ude80", "title": "Export Clean ZIP or Deploy", "desc": "Download production-ready static files ready to drop onto Netlify, Vercel, or GitHub Pages."}]
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
