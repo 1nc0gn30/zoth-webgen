@@ -17,11 +17,12 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   docker-build-publish:
     runs-on: ubuntu-latest
-    # timeout-minutes: 30
+    timeout-minutes: 25
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -56,7 +57,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           target: zoth-webgen-production
           push: true
           tags: ${{ steps.meta.outputs.tags }}
