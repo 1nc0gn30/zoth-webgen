@@ -8,7 +8,7 @@
   "version": "3.0.0",
   "author": {
     "name": "1nc0gn30 • NullAI",
-    "email": "neal@1nc0gn30.si"
+    "email": "support@1nc0gn30.si"
   },
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",

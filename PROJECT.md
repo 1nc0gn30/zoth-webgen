@@ -1,6 +1,6 @@
 # Project Management of Zoth WebGen Foundry
 
-Zoth WebGen Foundry is engineered by Neal Frazier Tech (@1nc0gn30) as part of the sovereign NullAI platform ecosystem.
+Zoth WebGen Foundry is engineered by 1nc0gn30 (@1nc0gn30) as part of the sovereign NullAI platform ecosystem.
 
 > **Engineering Roadmap**: Tracked in the [NullAI Platform Hub](https://nullai.tech) and GitHub repository [1nc0gn30/zoth-webgen](https://github.com/1nc0gn30/zoth-webgen).
 

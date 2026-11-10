@@ -387,13 +387,16 @@ export async function action({ request }: ActionFunctionArgs) {
       case 'search_free_icons': {
         const query = String(body.query || 'bolt').trim();
         const collection = String(body.collection || 'pixelarticons').trim();
+
         let icons: string[] = [];
 
         try {
           const prefixParam = collection === 'all' ? '' : `&prefix=${encodeURIComponent(collection)}`;
+
           const res = await fetch(
             `https://api.iconify.design/search?query=${encodeURIComponent(query)}&limit=20${prefixParam}`,
           );
+
           const data = (await res.json()) as { icons?: string[] };
           icons = data?.icons || [];
         } catch {

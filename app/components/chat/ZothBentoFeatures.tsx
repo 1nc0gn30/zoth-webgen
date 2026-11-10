@@ -117,7 +117,9 @@ export const ZothBentoFeatures: React.FC<ZothBentoFeaturesProps> = ({ onSelectCl
                 </div>
                 <div>
                   <h2 className="text-base font-bold text-white">Zoth Bolt MCP &amp; Media Asset Bridge</h2>
-                  <p className="text-xs text-[#D4AF37] font-mono">Universal AI Agent &amp; Free Media Asset MCP Server</p>
+                  <p className="text-xs text-[#D4AF37] font-mono">
+                    Universal AI Agent &amp; Free Media Asset MCP Server
+                  </p>
                 </div>
               </div>
               <button

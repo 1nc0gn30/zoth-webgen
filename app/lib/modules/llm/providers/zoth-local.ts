@@ -408,7 +408,12 @@ function createInstantBoltArchitectModel(): LanguageModelV1 {
     const rawUser = (userMatch ? userMatch[1] : promptText).trim();
     const firstLine = rawUser.split('\n').find((l) => l.trim().length > 3) || 'Zoth Bolt Sovereign Studio';
     const title = firstLine.replace(/[#*`]/g, '').trim().slice(0, 56) || 'Zoth Bolt Sovereign Studio';
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'zoth-bolt-app';
+
+    const slug =
+      title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '') || 'zoth-bolt-app';
 
     const pkgJson = JSON.stringify(
       {
@@ -581,6 +586,7 @@ npm run dev
     async doGenerate(options: LanguageModelV1CallOptions) {
       const promptText = formatPromptForCli(options.prompt);
       const text = buildArtifactText(promptText);
+
       return {
         text,
         finishReason: 'stop',
@@ -591,6 +597,7 @@ npm run dev
     async doStream(options: LanguageModelV1CallOptions) {
       const promptText = formatPromptForCli(options.prompt);
       const text = buildArtifactText(promptText);
+
       const stream = new ReadableStream<LanguageModelV1StreamPart>({
         start(controller) {
           controller.enqueue({ type: 'text-delta', textDelta: text });
@@ -602,6 +609,7 @@ npm run dev
           controller.close();
         },
       });
+
       return {
         stream,
         rawCall: { rawPrompt: promptText, rawSettings: {} },
@@ -611,7 +619,6 @@ npm run dev
 }
 
 export default class ZothLocalProvider extends BaseProvider {
-
   name = 'ZothLocal';
   getApiKeyLink = 'https://nullai.tech';
   labelForGetApiKey = 'ZothOS Local Engines (No API Key Required)';

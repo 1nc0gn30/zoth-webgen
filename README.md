@@ -14,7 +14,7 @@
 # ⚡ Zoth Bolt — Full-Stack AI & Motion Architect (`:5173`)
 
 > **Where Sovereign Software & High-Craft Motion Begin.**  
-> **Zoth Bolt** is the primary Full-Stack AI, Motion Edit, and WebContainer IDE inside **[Zoth Studio v2](https://zoth.nullai.tech)** and **[ZothOS Linux 3.3](https://zothos.nullai.tech)** — proudly built upon the open-source **[`bolt.diy`](https://github.com/stackblitz-labs/bolt.diy)** foundation and supercharged into an Awwwards-grade creation powerhouse by **Neal Frazier Tech ([@1nc0gn30](https://github.com/1nc0gn30))**.
+> **Zoth Bolt** is the primary Full-Stack AI, Motion Edit, and WebContainer IDE inside **[Zoth Studio v2](https://zoth.nullai.tech)** and **[ZothOS Linux 3.3](https://zothos.nullai.tech)** — proudly built upon the open-source **[`bolt.diy`](https://github.com/stackblitz-labs/bolt.diy)** foundation and supercharged into an Awwwards-grade creation powerhouse by **1nc0gn30 ([@1nc0gn30](https://github.com/1nc0gn30))**.
 
 ---
 
@@ -130,5 +130,5 @@ If you appreciate local-first AI engineering and high-craft motion design, suppo
 
 ## 📜 Open-Source Lineage & Attribution
 
-- **Engineered by**: **Neal Frazier Tech ([@1nc0gn30](https://github.com/1nc0gn30))** • **[NullAI Platform](https://nullai.tech)**
+- **Engineered by**: **1nc0gn30 ([@1nc0gn30](https://github.com/1nc0gn30))** • **[NullAI Platform](https://nullai.tech)**
 - **Open-Source Foundation**: Proudly built on the open-source **[`bolt.diy`](https://github.com/stackblitz-labs/bolt.diy)** project (MIT License) and heavily expanded for **[Zoth Studio v2](https://zoth.nullai.tech)** and **[ZothOS Linux 3.3](https://zothos.nullai.tech)**.

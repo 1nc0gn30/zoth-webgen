@@ -14,6 +14,7 @@ function readCapped(filePath: string): string {
     }
 
     const text = readFileSync(filePath, 'utf8');
+
     return text.length > MAX_CHARS ? `${text.slice(0, MAX_CHARS)}\n…` : text;
   } catch {
     return '';
