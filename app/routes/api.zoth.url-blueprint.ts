@@ -37,30 +37,26 @@ function extractBlueprint(url: string, html: string): UrlBlueprintResult {
   const descMatch =
     html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i) ||
     html.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["']/i);
+
   const description = stripTags(descMatch?.[1] || 'High-converting digital platform and interactive web application.');
 
   const headingMatches = Array.from(html.matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi));
+
   const headings = Array.from(
-    new Set(
-      headingMatches
-        .map((m) => stripTags(m[1]))
-        .filter((t) => t.length > 2 && t.length < 110),
-    ),
+    new Set(headingMatches.map((m) => stripTags(m[1])).filter((t) => t.length > 2 && t.length < 110)),
   ).slice(0, 10);
 
   const navBlock = html.match(/<nav[\s\S]*?<\/nav>/i)?.[0] || html.match(/<header[\s\S]*?<\/header>/i)?.[0] || '';
   const navLinks = Array.from(navBlock.matchAll(/<a[^>]*>([\s\S]*?)<\/a>/gi));
+
   const navItems = Array.from(
-    new Set(
-      navLinks
-        .map((m) => stripTags(m[1]))
-        .filter((t) => t.length > 1 && t.length < 28),
-    ),
+    new Set(navLinks.map((m) => stripTags(m[1])).filter((t) => t.length > 1 && t.length < 28)),
   ).slice(0, 7);
 
   const hexMatches = Array.from(html.matchAll(/#([0-9a-fA-F]{6})\b/g)).map((m) => `#${m[1].toUpperCase()}`);
   const ignoredHex = new Set(['#FFFFFF', '#000000', '#111111', '#222222', '#333333', '#EEEEEE', '#CCCCCC']);
   const colors = Array.from(new Set(hexMatches.filter((c) => !ignoredHex.has(c)))).slice(0, 6);
+
   if (colors.length === 0) {
     colors.push('#D4AF37', '#38BDF8', '#10B981');
   }
@@ -80,6 +76,7 @@ function extractBlueprint(url: string, html: string): UrlBlueprintResult {
     1,
     (html.match(/<section\b/gi) || []).length + (html.match(/<article\b/gi) || []).length,
   );
+
   const hasJsonLd = /application\/ld\+json/i.test(html);
   const hasOgImage = /property=["']og:image["']/i.test(html);
 
@@ -115,6 +112,7 @@ async function handleUrlBlueprint(rawUrl: string): Promise<UrlBlueprintResult> {
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 6500);
+
     const res = await fetch(targetUrl, {
       signal: controller.signal,
       headers: {
@@ -125,6 +123,7 @@ async function handleUrlBlueprint(rawUrl: string): Promise<UrlBlueprintResult> {
     clearTimeout(timer);
 
     const html = await res.text();
+
     return extractBlueprint(targetUrl, html);
   } catch (err: any) {
     return {
@@ -132,7 +131,12 @@ async function handleUrlBlueprint(rawUrl: string): Promise<UrlBlueprintResult> {
       url: targetUrl,
       title: targetUrl.replace(/^https?:\/\//, '').split('/')[0],
       description: 'Autonomous redesign blueprint synthesized from domain archetype.',
-      headings: ['Hero Value Proposition', 'Interactive Product Workspace', 'Bento Capability Matrix', 'Transparent Pricing & FAQ'],
+      headings: [
+        'Hero Value Proposition',
+        'Interactive Product Workspace',
+        'Bento Capability Matrix',
+        'Transparent Pricing & FAQ',
+      ],
       navItems: ['Product', 'Interactive Demo', 'Architecture', 'Pricing', 'FAQ'],
       colors: ['#D4AF37', '#38BDF8', '#10B981'],
       fonts: ['Syne', 'Space Grotesk', 'JetBrains Mono'],
@@ -149,6 +153,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const urlObj = new URL(request.url);
   const target = urlObj.searchParams.get('url') || 'https://zoth.nullai.tech';
   const result = await handleUrlBlueprint(target);
+
   return json(result, {
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -171,6 +176,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const body = (await request.json().catch(() => ({}))) as { url?: string };
   const target = body.url || 'https://zoth.nullai.tech';
   const result = await handleUrlBlueprint(target);
+
   return json(result, {
     headers: {
       'Access-Control-Allow-Origin': '*',

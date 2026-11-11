@@ -47,7 +47,9 @@ export function BuildLogStream({ isStreaming }: { isStreaming?: boolean }) {
           onClick={() => buildLogOpenAtom.set(!open)}
           className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.16em] text-accent-500"
         >
-          <span className={`w-1.5 h-1.5 rounded-full ${isStreaming ? 'bg-emerald-400 animate-pulse' : 'bg-white/30'}`} />
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${isStreaming ? 'bg-emerald-400 animate-pulse' : 'bg-white/30'}`}
+          />
           Build log
           <span className="text-white/40 normal-case tracking-normal">{lines.length} lines</span>
         </button>
@@ -77,7 +79,12 @@ export function BuildLogStream({ isStreaming }: { isStreaming?: boolean }) {
           {lines.map((line) => (
             <div key={line.id} className="flex gap-2">
               <span className="text-white/25 shrink-0 tabular-nums">
-                {new Date(line.ts).toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                {new Date(line.ts).toLocaleTimeString([], {
+                  hour12: false,
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  second: '2-digit',
+                })}
               </span>
               <span className={`shrink-0 w-8 ${KIND_COLOR[line.kind]}`}>{KIND_MARK[line.kind]}</span>
               <span className={KIND_COLOR[line.kind]}>

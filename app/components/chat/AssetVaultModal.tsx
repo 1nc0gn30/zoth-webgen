@@ -57,10 +57,10 @@ const SECTION_STACK_BLOCKS = [
     spec: 'Include an interactive multi-layer isometric SVG architecture diagram with a layer-separation scrub slider and clickable node callouts.',
   },
   {
-    id: 'monetization-funnel',
-    name: '5. Sovereign Dual-Rail Pricing & Output Paywall',
-    badge: 'Stripe + Solana DePay',
-    spec: 'Include the Sovereign Monetization Funnel: Founding Member $19 lifetime vs $79 regular banner, Frosted Glass output blur lock overlay, dual Stripe + Solana DePay checkout triggers, and ?licensed=true 1-click unlock.',
+    id: 'support-bar',
+    name: '5. Open-Access Attribution & Voluntary Support Bar',
+    badge: 'Open-Access • Coffee + Solana Tip',
+    spec: 'Keep 100% of features, exports, and utilities unlocked by default with zero paywalls, plus a subtle Buy Us a Coffee (Stripe) and Solana tip footer link.',
   },
   {
     id: 'aeo-faq',

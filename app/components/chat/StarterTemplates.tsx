@@ -1,7 +1,7 @@
 import React from 'react';
+import { MOTION_EDIT_TEMPLATES } from '~/lib/modules/design-libraries/media-packs';
 import type { Template } from '~/types/template';
 import { STARTER_TEMPLATES } from '~/utils/constants';
-import { MOTION_EDIT_TEMPLATES } from '~/lib/modules/design-libraries/media-packs';
 
 interface FrameworkLinkProps {
   template: Template;
@@ -87,10 +87,10 @@ const DESIGN_2026_STACKS = [
     id: 'sovereign-saas',
     name: 'Sovereign Micro-SaaS 2026',
     icon: 'i-ph:currency-circle-dollar-fill',
-    badge: 'Stripe + Solana • Dark Glass',
+    badge: 'Open-Access • Dark Glass',
     accent: '#10B981',
     prompt:
-      'Build a production-grade 2026 Micro-SaaS with obsidian glassmorphic UI, dual Stripe + Solana DePay payment rails, an interactive above-the-fold sales banner, frosted-glass output paywall, and 1-click license activation.',
+      'Build a production-grade 2026 Micro-SaaS with obsidian glassmorphic UI, 100% unlocked in-browser client-side utilities, real-time telemetry gauges, and a subtle Buy Us a Coffee + Solana tip support footer.',
   },
   {
     id: 'agent-orchestrator',

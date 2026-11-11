@@ -36,10 +36,10 @@ export default function PrivacyPage() {
             <section className="space-y-3">
               <h2 className="text-lg font-bold text-[#D4AF37]">1. Zero Server-Side Prompt or Code Storage</h2>
               <p>
-                <strong>Zoth Bolt</strong> is engineered with a strict{' '}
-                <em>local-first, sovereign architecture</em>. Your prompts, code artifacts, AST file trees, and terminal
-                execution buffers are stored exclusively in your browser’s local IndexedDB and localStorage instances.
-                We run zero centralized databases that capture or retain your project data.
+                <strong>Zoth Bolt</strong> is engineered with a strict <em>local-first, sovereign architecture</em>.
+                Your prompts, code artifacts, AST file trees, and terminal execution buffers are stored exclusively in
+                your browser’s local IndexedDB and localStorage instances. We run zero centralized databases that
+                capture or retain your project data.
               </p>
             </section>
 

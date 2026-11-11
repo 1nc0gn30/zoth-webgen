@@ -8,6 +8,7 @@ export const ZothGuardrailBar: React.FC = () => {
 
   const audit = useMemo(() => {
     const entries = Object.entries(files || {});
+
     let combined = '';
     let hasRobots = false;
     let hasNetlifyToml = false;
@@ -63,9 +64,9 @@ export const ZothGuardrailBar: React.FC = () => {
         pass: /1nc0gn30 • NullAI|1nc0gn30|NullAI/i.test(combined),
       },
       {
-        id: 'MONETIZATION',
-        label: 'Dual-Rail Stripe + Solana Tip & ?licensed=true',
-        pass: /Stripe|Solana|DePay|licensed/i.test(combined),
+        id: 'SUPPORT',
+        label: 'Open-Access Attribution & Voluntary Support Link',
+        pass: /buy\.stripe\.com|Buy Us a Coffee|Solana|Open Access/i.test(combined),
       },
     ];
 
@@ -112,6 +113,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
 
       if (htmlEntry) {
         const [htmlPath, htmlDirent] = htmlEntry;
+
         let html = (htmlDirent as any).content || '';
 
         html = html.replace(/<img(?![^>]*\balt=)([^>]*)>/gi, '<img alt="Zoth Bolt visual asset"$1>');
@@ -143,7 +145,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
                 name: 'Zoth Bolt Sovereign Application',
                 applicationCategory: 'DeveloperApplication',
                 operatingSystem: 'All',
-                offers: { '@type': 'Offer', price: '19.00', priceCurrency: 'USD' },
+                offers: { '@type': 'Offer', price: '0.00', priceCurrency: 'USD' },
                 creator: { '@type': 'Organization', name: '1nc0gn30 • NullAI', url: 'https://nullai.tech' },
               },
               {
@@ -159,10 +161,10 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
                   },
                   {
                     '@type': 'Question',
-                    name: 'What payment and licensing options are supported?',
+                    name: 'Is this tool free and open-access?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Supports Stripe and Solana Tip with instant ?licensed=true client-side activation.',
+                      text: 'Yes, 100% free and unlocked by default with optional voluntary Buy Us a Coffee support.',
                     },
                   },
                 ],
@@ -176,7 +178,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
           html = html.replace(/<\/head>/i, `${headExtras.join('\n')}\n  </head>`);
         }
 
-        if (!/1nc0gn30 • NullAI|1nc0gn30/i.test(html) || !/Stripe|Solana|DePay|licensed/i.test(html)) {
+        if (!/1nc0gn30 • NullAI|1nc0gn30/i.test(html) || !/buy\.stripe\.com|Buy Us a Coffee|Solana/i.test(html)) {
           const footerBlock = `
   <!-- Sovereign Attribution & Support Architecture -->
   <footer style="padding:12px 20px;text-align:center;font-family:monospace;font-size:12px;color:#94A3B8;background:#08080B;border-top:1px solid rgba(212,175,55,0.25);">
@@ -197,7 +199,9 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
         await workbenchStore.saveFile(htmlPath);
       }
 
-      toast.success('🛡️ Auto-Healed Workspace: Injected Schema.org @graph, OpenGraph, robots.txt, netlify.toml & Sovereign Funnel!');
+      toast.success(
+        '🛡️ Auto-Healed Workspace: Injected Schema.org @graph, OpenGraph, robots.txt, netlify.toml & Sovereign Funnel!',
+      );
     } catch {
       toast.info('Generated files ready for Sovereign Guardrail injection.');
     }
@@ -217,6 +221,7 @@ Sitemap: https://zoth.nullai.tech/sitemap.xml
       }
 
       const [htmlPath, htmlDirent] = htmlEntry;
+
       let html = (htmlDirent as any).content || '';
 
       const themeOverrideCss = `

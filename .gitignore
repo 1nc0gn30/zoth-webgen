@@ -49,3 +49,7 @@ docs/instructions/Roadmap.md
 
 test-results/
 vite.config.ts.timestamp-*
+
+__pycache__/
+*.py[cod]
+.pytest_cache/

@@ -26,6 +26,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   try {
     const response = await fetch(target.toString(), { signal: controller.signal });
     const payload = await response.json();
+
     return json(payload);
   } catch (error: any) {
     return json({

@@ -94,8 +94,8 @@ Steps to Reproduce: `;
               <div className="rounded-xl border border-white/10 p-4 space-y-1.5">
                 <strong className="text-sm text-[#D4AF37] block">What is the refund process?</strong>
                 <p>
-                  We provide a 100% money-back guarantee within 30 days of purchase. Simply email
-                  support@1nc0gn30.si with your receipt, and we will issue a full refund with zero friction.
+                  We provide a 100% money-back guarantee within 30 days of purchase. Simply email support@1nc0gn30.si
+                  with your receipt, and we will issue a full refund with zero friction.
                 </p>
               </div>
 

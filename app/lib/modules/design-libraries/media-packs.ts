@@ -522,7 +522,8 @@ export const VECTOR_AND_ICON_LIBRARIES = [
     id: 'iconify-universal',
     name: 'Iconify 200k+ Free Vector & Pixel-Art API',
     badge: '200,000+ Free SVGs',
-    description: 'Instant zero-auth REST API for Lucide, Phosphor, Pixelarticons, Game-Icons, Tabler, and Simple-Icons.',
+    description:
+      'Instant zero-auth REST API for Lucide, Phosphor, Pixelarticons, Game-Icons, Tabler, and Simple-Icons.',
     cdnPattern: 'https://api.iconify.design/pixelarticons/zap.svg?color=%23D4AF37',
   },
   {
@@ -752,7 +753,7 @@ export const FREE_MEDIA_ASSET_SOURCES = [
   {
     id: 'webaudio-sfx',
     name: 'Procedural WebAudio Synthesizer',
-    description: 'Zero-dependency in-browser sound effects (tactile clicks, triad chimes, CRT keystrokes, aperture swooshes).',
+    description:
+      'Zero-dependency in-browser sound effects (tactile clicks, triad chimes, CRT keystrokes, aperture swooshes).',
   },
 ];
-

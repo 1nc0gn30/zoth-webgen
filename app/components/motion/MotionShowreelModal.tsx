@@ -38,8 +38,8 @@ const SCENES = [
   {
     time: '0:11 - 0:13',
     title: 'Scene 5: Instant Realization',
-    copy: 'ONE-CLICK LIFETIME ACTIVATION • $19',
-    detail: 'Dual Stripe + Solana DePay rails dissolve output paywall blur in real-time.',
+    copy: '100% OPEN-ACCESS • ZERO PAYWALLS',
+    detail: 'Full project ZIP export, AST inspection, and production deployment ready out of the box.',
     accent: '#D4AF37',
   },
   {

@@ -2,7 +2,8 @@ import { json, type ActionFunctionArgs } from '@remix-run/cloudflare';
 
 interface CritiqueItem {
   id: string;
-  category: 'Hierarchy' | 'Responsiveness' | 'Visual Craft' | 'Interactivity' | 'AEO & Conversion';
+  category:
+    'Hierarchy' | 'Responsiveness' | 'Visual Craft' | 'Interactivity' | 'AEO & Conversion' | 'AEO & Attribution';
   label: string;
   passed: boolean;
   score: number;
@@ -50,16 +51,17 @@ export function runDeterministicCritique(html: string) {
     },
     {
       id: 'aeo-funnel',
-      category: 'AEO & Conversion',
-      label: 'Schema.org @graph JSON-LD + Sovereign Conversion Funnel',
-      passed: /application\/ld\+json/i.test(html) && (/Stripe|Solana|DePay|licensed/i.test(html)),
-      score: /application\/ld\+json/i.test(html) && (/Stripe|Solana|DePay|licensed/i.test(html)) ? 20 : 10,
+      category: 'AEO & Attribution',
+      label: 'Schema.org @graph JSON-LD + Open-Access Attribution',
+      passed: /application\/ld\+json/i.test(html) && /1nc0gn30|NullAI|buy\.stripe\.com|Solana/i.test(html),
+      score: /application\/ld\+json/i.test(html) && /1nc0gn30|NullAI|buy\.stripe\.com|Solana/i.test(html) ? 20 : 10,
       maxScore: 20,
-      fixDescription: 'Inject Schema.org @graph (WebApplication + FAQPage) and Dual-Rail conversion bar.',
+      fixDescription: 'Inject Schema.org @graph (WebApplication + FAQPage) and open-access attribution footer.',
     },
   ];
 
   const totalScore = items.reduce((acc, item) => acc + item.score, 0);
+
   return {
     totalScore,
     maxScore: 100,

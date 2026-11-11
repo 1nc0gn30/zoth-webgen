@@ -1,12 +1,4 @@
-export type PromptPresetGroup =
-  | 'framework'
-  | 'visual'
-  | 'motion'
-  | 'layout'
-  | 'feature'
-  | 'commerce'
-  | 'zoth'
-  | 'copy';
+export type PromptPresetGroup = 'framework' | 'visual' | 'motion' | 'layout' | 'feature' | 'commerce' | 'zoth' | 'copy';
 
 export interface PromptPreset {
   id: string;
@@ -33,7 +25,8 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     label: 'Vite + React 19',
     group: 'framework',
     badge: 'HMR',
-    prompt: 'Scaffold Vite + React 19 + TypeScript + Tailwind. Write package.json, vite.config, index.html, and src yourself. No interactive create commands.',
+    prompt:
+      'Scaffold Vite + React 19 + TypeScript + Tailwind. Write package.json, vite.config, index.html, and src yourself. No interactive create commands.',
   },
   {
     id: 'fw-html',
@@ -72,7 +65,8 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     label: 'Zoth gold foundry',
     group: 'visual',
     badge: '#D4AF37',
-    prompt: 'Use Zoth foundry tokens: background #08080B, surface #121218, accent #D4AF37, text white. Space Grotesk display, Inter body. One gold accent, no extra palette.',
+    prompt:
+      'Use Zoth foundry tokens: background #08080B, surface #121218, accent #D4AF37, text white. Space Grotesk display, Inter body. One gold accent, no extra palette.',
   },
   {
     id: 'vis-obsidian-glass',
@@ -84,7 +78,8 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'vis-editorial',
     label: 'Editorial luxury',
     group: 'visual',
-    prompt: 'Editorial layout: generous whitespace, serif display + sans body, long measure 60ch, restrained ink, no cards-on-cards.',
+    prompt:
+      'Editorial layout: generous whitespace, serif display + sans body, long measure 60ch, restrained ink, no cards-on-cards.',
   },
   {
     id: 'vis-brutalist',
@@ -120,13 +115,15 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'mot-css-only',
     label: 'CSS only',
     group: 'motion',
-    prompt: 'Motion is CSS only: transform and opacity, under 400ms, respect prefers-reduced-motion. No GSAP, no canvas.',
+    prompt:
+      'Motion is CSS only: transform and opacity, under 400ms, respect prefers-reduced-motion. No GSAP, no canvas.',
   },
   {
     id: 'mot-framer',
     label: 'Framer Motion',
     group: 'motion',
-    prompt: 'Use Framer Motion for entrance and page handoff. Stagger 40–80ms. Never hide content behind in-view opacity 0 without a fallback.',
+    prompt:
+      'Use Framer Motion for entrance and page handoff. Stagger 40–80ms. Never hide content behind in-view opacity 0 without a fallback.',
   },
   {
     id: 'mot-gsap',
@@ -240,13 +237,14 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'com-stripe-ui',
     label: 'Stripe checkout UI',
     group: 'commerce',
-    prompt: 'Checkout UI only: price the user named, Stripe-styled pay button. Do not invent a second price or a founding banner.',
+    prompt:
+      'Checkout UI only: price the user named, Stripe-styled pay button. Do not invent a second price or a founding banner.',
   },
   {
     id: 'com-solana',
-    label: 'Solana DePay UI',
+    label: 'Solana Tip UI',
     group: 'commerce',
-    prompt: 'Add a Solana DePay-styled pay control next to the card button only if a price was asked.',
+    prompt: 'Add a click-to-copy Solana tip control next to the Buy Us a Coffee link.',
   },
   {
     id: 'com-pricing',
@@ -265,14 +263,16 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     label: 'Studio tokens',
     group: 'zoth',
     badge: 'Studio',
-    prompt: 'Match Zoth Studio: gold #D4AF37, Space Grotesk + Inter, mono eyebrows with 0.2em tracking, MotionReveal-style short fades.',
+    prompt:
+      'Match Zoth Studio: gold #D4AF37, Space Grotesk + Inter, mono eyebrows with 0.2em tracking, MotionReveal-style short fades.',
   },
   {
     id: 'zoth-os-strip',
     label: 'OS control strip',
     group: 'zoth',
     badge: 'OS',
-    prompt: 'Add a footer control strip linking to Zoth Studio (localhost:3000), Zoth Civilization (localhost:9393), and this WebGen foundry. Honest labels, no fake uptime.',
+    prompt:
+      'Add a footer control strip linking to Zoth Studio (localhost:3000), Zoth Civilization (localhost:9393), and this WebGen foundry. Honest labels, no fake uptime.',
   },
   {
     id: 'zoth-agent-hud',
@@ -290,33 +290,38 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'zoth-promptmaster',
     label: 'PromptMaster sister',
     group: 'zoth',
-    prompt: 'If a tools page exists, list PromptMaster Studio as a sister product at https://promptmaster-studio.netlify.app with no invented price.',
+    prompt:
+      'If a tools page exists, list PromptMaster Studio as a sister product at https://promptmaster-studio.netlify.app with no invented price.',
   },
   {
     id: 'zoth-agy',
     label: 'AGY note',
     group: 'zoth',
-    prompt: 'In the about or footer, name AGY (Antigravity CLI) and Grok CLI as local agents on Zoth OS. Do not fake a live socket.',
+    prompt:
+      'In the about or footer, name AGY (Antigravity CLI) and Grok CLI as local agents on Zoth OS. Do not fake a live socket.',
   },
   {
     id: 'zoth-memory-link',
     label: 'Memory link',
     group: 'zoth',
     badge: '8094',
-    prompt: 'If a tools or footer strip exists, link Zoth Memory at http://127.0.0.1:8094/#everywhere. Label it Memory. Do not invent stored notes.',
+    prompt:
+      'If a tools or footer strip exists, link Zoth Memory at http://127.0.0.1:8094/#everywhere. Label it Memory. Do not invent stored notes.',
   },
   {
     id: 'zoth-os-site',
     label: 'OS product site',
     group: 'zoth',
     badge: 'v3.2',
-    prompt: 'If you mention Zoth OS, link https://zothos.nullai.tech and the v3.2.0 ISO. Live users are zoth, azoth, and root. Password zoth. Do not say the live user is neo.',
+    prompt:
+      'If you mention Zoth OS, link https://zothos.nullai.tech and the v3.2.0 ISO. Live users are zoth, azoth, and root. Password zoth. Do not say the live user is neo.',
   },
   {
     id: 'zoth-studio-cta',
     label: 'Studio CTA',
     group: 'zoth',
-    prompt: 'Primary product CTA for Zoth OS is https://zothos.nullai.tech. Companion studio is https://zoth.nullai.tech. Do not invent a second Product Hunt listing.',
+    prompt:
+      'Primary product CTA for Zoth OS is https://zothos.nullai.tech. Companion studio is https://zoth.nullai.tech. Do not invent a second Product Hunt listing.',
   },
   {
     id: 'zoth-no-paywall',
@@ -328,7 +333,8 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'feat-llms-txt',
     label: 'llms.txt',
     group: 'feature',
-    prompt: 'Add a public /llms.txt that states what the site is, who it is for, and the live URLs. No invented metrics.',
+    prompt:
+      'Add a public /llms.txt that states what the site is, who it is for, and the live URLs. No invented metrics.',
   },
   {
     id: 'feat-a11y',
@@ -340,7 +346,8 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'mot-aperture',
     label: 'Aperture intro',
     group: 'motion',
-    prompt: 'Optional 800ms aperture-style intro that does not trap the user. Honor prefers-reduced-motion. Skip control always visible.',
+    prompt:
+      'Optional 800ms aperture-style intro that does not trap the user. Honor prefers-reduced-motion. Skip control always visible.',
   },
   {
     id: 'copy-llms',
@@ -352,13 +359,15 @@ export const PROMPT_PRESETS: PromptPreset[] = [
     id: 'copy-aeo',
     label: 'AEO / FAQ',
     group: 'copy',
-    prompt: 'Add an FAQ with real questions and answers for answer engines. No lorem. JSON-LD FAQPage if it is a public site.',
+    prompt:
+      'Add an FAQ with real questions and answers for answer engines. No lorem. JSON-LD FAQPage if it is a public site.',
   },
   {
     id: 'copy-honest',
     label: 'Honest copy',
     group: 'copy',
-    prompt: 'Headlines say what it does in eight words or fewer. Buttons are verbs. No invented reviews, rankings, or staff photos.',
+    prompt:
+      'Headlines say what it does in eight words or fewer. Buttons are verbs. No invented reviews, rankings, or staff photos.',
   },
   {
     id: 'copy-docs',

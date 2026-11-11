@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { playTactileClick, playSuccessChime } from '~/lib/modules/design-libraries/media-packs';
-import { STUDIO_SYSTEM_PRESETS } from '~/lib/studio-system-presets';
 import { studioTelemetryAtom } from '~/lib/stores/studioStore';
+import { STUDIO_SYSTEM_PRESETS } from '~/lib/studio-system-presets';
 
 export interface AIStudioModalProps {
   isOpen: boolean;

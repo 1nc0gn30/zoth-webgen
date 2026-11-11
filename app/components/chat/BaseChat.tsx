@@ -11,18 +11,16 @@ import { toast } from 'react-toastify';
 import { ClientOnly } from 'remix-utils/client-only';
 import { getApiKeysFromCookies } from './APIKeyManager';
 import styles from './BaseChat.module.scss';
+import { BuildLogStream } from './BuildLogStream';
 import ChatAlert from './ChatAlert';
 import { ChatBox } from './ChatBox';
 import GitCloneButton from './GitCloneButton';
 import LlmErrorAlert from './LLMApiAlert';
 import { Messages } from './Messages.client';
 import ProgressCompilation from './ProgressCompilation';
-import { BuildLogStream } from './BuildLogStream';
 import { PromptPresetStack } from './PromptPresetStack';
 import StarterTemplates from './StarterTemplates';
 import { ZothBentoFeatures } from './ZothBentoFeatures';
-import { pendingPromptAppendAtom } from '~/lib/stores/studioStore';
-import { pushBuildLog } from '~/lib/stores/buildLog';
 import { ExamplePrompts } from '~/components/chat/ExamplePrompts';
 import { SupabaseChatAlert } from '~/components/chat/SupabaseAlert';
 import { ImportButtons } from '~/components/chat/chatExportAndImport/ImportButtons';
@@ -35,7 +33,9 @@ import { Workbench } from '~/components/workbench/Workbench.client';
 import { StickToBottom, useStickToBottomContext } from '~/lib/hooks';
 import { useWebGenMcpBridge } from '~/lib/hooks/useWebGenMcpBridge';
 import type { ModelInfo } from '~/lib/modules/llm/types';
+import { pushBuildLog } from '~/lib/stores/buildLog';
 import { expoUrlAtom } from '~/lib/stores/qrCodeStore';
+import { pendingPromptAppendAtom } from '~/lib/stores/studioStore';
 import type { ActionAlert, SupabaseAlert, DeployAlert, LlmErrorAlertType } from '~/types/actions';
 import type { ProgressAnnotation } from '~/types/context';
 import type { DesignScheme } from '~/types/design-scheme';
@@ -422,10 +422,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                     Zoth Bolt Full-Stack Architect
                   </h1>
                   <p className="text-xs sm:text-sm lg:text-base mb-1.5 text-bolt-elements-textSecondary animate-fade-in animation-delay-200 max-w-[44rem] mx-auto">
-                    Build Awwwards-grade full-stack apps &amp; 15s motion edits with any cloud LLM, Ollama model, or local CLI agent (AGY, Hermes, Grok, Claude, OpenCode, Cline, Aider) plus 200k+ free SVG &amp; pixel-art assets.
+                    Build Awwwards-grade full-stack apps &amp; 15s motion edits with any cloud LLM, Ollama model, or
+                    local CLI agent (AGY, Hermes, Grok, Claude, OpenCode, Cline, Aider) plus 200k+ free SVG &amp;
+                    pixel-art assets.
                   </p>
                   <p className="text-[11px] font-mono text-bolt-elements-textTertiary mb-2 animate-fade-in animation-delay-200">
-                    Supercharged for <span className="text-[#D4AF37]">Zoth Studio</span> &amp; <span className="text-[#D4AF37]">ZothOS</span> • Proudly built on the open-source{' '}
+                    Supercharged for <span className="text-[#D4AF37]">Zoth Studio</span> &amp;{' '}
+                    <span className="text-[#D4AF37]">ZothOS</span> • Proudly built on the open-source{' '}
                     <a
                       href="https://github.com/stackblitz-labs/bolt.diy"
                       target="_blank"
@@ -588,9 +591,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               <div className="flex flex-col gap-5">
                 {!chatStarted &&
                   ExamplePrompts((_event, messageInput) => {
-                    const next = input?.trim()
-                      ? `${input.trim()}\n\n${messageInput}`
-                      : messageInput || '';
+                    const next = input?.trim() ? `${input.trim()}\n\n${messageInput}` : messageInput || '';
                     handleInputChange?.({ target: { value: next } } as any);
                   })}
                 {!chatStarted && (
@@ -604,9 +605,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                 {!chatStarted && (
                   <StarterTemplates
                     onSelectPrompt={(selectedPrompt) => {
-                      const next = input?.trim()
-                        ? `${input.trim()}\n\n${selectedPrompt}`
-                        : selectedPrompt;
+                      const next = input?.trim() ? `${input.trim()}\n\n${selectedPrompt}` : selectedPrompt;
                       handleInputChange?.({ target: { value: next } } as any);
                     }}
                   />

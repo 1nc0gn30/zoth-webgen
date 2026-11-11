@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { pendingPromptAppendAtom } from '~/lib/stores/studioStore';
 import { soulPanelOpenAtom } from '~/lib/stores/soul';
+import { pendingPromptAppendAtom } from '~/lib/stores/studioStore';
 
 interface BridgeStatus {
   studio: boolean;
@@ -47,13 +47,16 @@ export function ZothBridgeDock({ onInject, onOpenAgy, onOpenStudio }: ZothBridge
 
     const onDoc = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
+
       if (target?.closest('[data-zoth-host-menu]')) {
         return;
       }
+
       setMenuOpen(false);
     };
 
     document.addEventListener('mousedown', onDoc);
+
     return () => document.removeEventListener('mousedown', onDoc);
   }, [menuOpen]);
 
@@ -74,7 +77,9 @@ export function ZothBridgeDock({ onInject, onOpenAgy, onOpenStudio }: ZothBridge
       className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full border border-white/10 bg-black/40 text-[10px] font-mono text-white/80 hover:border-accent-500/40 hover:text-accent-200"
       title={up === undefined ? label : up ? `${label} is up` : `${label} is down`}
     >
-      <span className={`w-1.5 h-1.5 rounded-full ${up ? 'bg-emerald-400' : up === false ? 'bg-white/25' : 'bg-accent-500'}`} />
+      <span
+        className={`w-1.5 h-1.5 rounded-full ${up ? 'bg-emerald-400' : up === false ? 'bg-white/25' : 'bg-accent-500'}`}
+      />
       {label}
     </button>
   );

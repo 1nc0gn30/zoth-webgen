@@ -2273,15 +2273,15 @@ export const COMMODITIES_AND_EFFECTS: CatalogItem[] = [
   },
   {
     id: 'dual-cash-register-rails',
-    name: 'Dual Cash Register Rails (Stripe + Solana)',
+    name: 'Open-Access Support Bar (Stripe Coffee + Solana Tip)',
     category: 'commodity',
     description:
-      'High-converting twin checkout buttons featuring instant Stripe card checkout and DePay Solana web3 wallet checkout.',
-    tags: ['monetization', 'stripe', 'solana', 'checkout', 'depay', 'sovereign'],
-    badge: 'High-Converting Rails',
-    bestFor: 'Sovereign micro-SaaS, digital product paywalls, founding member lifetime passes',
+      'Clean, non-intrusive voluntary support buttons pairing Buy Us a Coffee (Stripe) with a click-to-copy Solana tip address.',
+    tags: ['support', 'stripe', 'solana', 'coffee', 'open-access', 'sovereign'],
+    badge: 'Voluntary Support',
+    bestFor: 'Open-access developer utilities, client-side web workstations, and open-source micro-apps',
     samplePromptSnippet:
-      'Render twin checkout buttons: Credit Card / Apple Pay (Stripe) and Solana USDC / SOL (DePay) with instant client activation.',
+      'Render a clean, non-intrusive footer support bar with Buy Us a Coffee (Stripe) and a click-to-copy Solana tip button.',
   },
   {
     id: 'founding-countdown-gauge',

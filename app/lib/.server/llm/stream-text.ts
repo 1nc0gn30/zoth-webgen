@@ -2,11 +2,11 @@ import { convertToCoreMessages, streamText as _streamText, type Message } from '
 import { MAX_TOKENS, PROVIDER_COMPLETION_LIMITS, isReasoningModel, type FileMap } from './constants';
 import { createFilesContext, extractPropertiesFromMessage } from './utils';
 import { PromptLibrary } from '~/lib/common/prompt-library';
-import { PROMPT_PRESETS } from '~/lib/prompt-presets';
-import { STUDIO_SYSTEM_PRESETS } from '~/lib/studio-system-presets';
 import { discussPrompt } from '~/lib/common/prompts/discuss-prompt';
 import { getSystemPrompt } from '~/lib/common/prompts/prompts';
 import { LLMManager } from '~/lib/modules/llm/manager';
+import { PROMPT_PRESETS } from '~/lib/prompt-presets';
+import { STUDIO_SYSTEM_PRESETS } from '~/lib/studio-system-presets';
 import type { DesignScheme } from '~/types/design-scheme';
 import type { IProviderSetting } from '~/types/model';
 import { DEFAULT_MODEL, DEFAULT_PROVIDER, MODIFICATIONS_TAG_NAME, PROVIDER_LIST, WORK_DIR } from '~/utils/constants';

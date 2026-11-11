@@ -11,12 +11,12 @@ import type { EditorDocument, ScrollPosition } from '~/components/editor/codemir
 import { description } from '~/lib/persistence';
 import { ActionRunner } from '~/lib/runtime/action-runner';
 import type { ActionCallbackData, ArtifactCallbackData } from '~/lib/runtime/message-parser';
+import { pushBuildLog } from '~/lib/stores/buildLog';
 import { webcontainer } from '~/lib/webcontainer';
 import type { ActionAlert, DeployAlert, SupabaseAlert } from '~/types/actions';
 import type { ITerminal } from '~/types/terminal';
 import { extractRelativePath } from '~/utils/diff';
 import { path } from '~/utils/path';
-import { pushBuildLog } from '~/lib/stores/buildLog';
 import { createSampler } from '~/utils/sampler';
 import { unreachable } from '~/utils/unreachable';
 

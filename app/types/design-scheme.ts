@@ -248,15 +248,14 @@ export const STUDIO_PRESETS: StudioPreset[] = [
   },
   {
     id: 'cyberpunk-solana',
-    name: 'Cyberpunk Solana DePay',
-    description:
-      'Vite React 19 + Aceternity UI + Three.js + Frosted Glass Paywall + Unbounded / DM Sans + Cyber Emerald',
+    name: 'Cyberpunk Emerald Web3',
+    description: 'Vite React 19 + Aceternity UI + Three.js + Bento Telemetry + Unbounded / DM Sans + Cyber Emerald',
     scheme: {
       framework: 'vite-react',
       uiLibrary: 'aceternity-ui',
       animationLibrary: 'threejs',
       typographyPairing: 'unbounded-dm-sans',
-      commodities: ['frosted-glass-paywall', 'dual-checkout-box', 'neon-cyber-glow'],
+      commodities: ['neon-cyber-glow'],
       palette: curatedPaletteMaps['cyber-emerald-solana'],
       features: ['rounded', 'frosted-glass', 'gradient'],
     },

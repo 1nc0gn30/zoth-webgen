@@ -23,6 +23,7 @@ export function pushBuildLog(kind: BuildLogKind, message: string, detail?: strin
     message,
     detail,
   };
+
   const next = [...buildLogAtom.get(), line];
   buildLogAtom.set(next.length > MAX_LINES ? next.slice(next.length - MAX_LINES) : next);
 }

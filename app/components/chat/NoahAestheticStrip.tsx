@@ -63,7 +63,7 @@ export const NoahAestheticStrip: React.FC<NoahAestheticStripProps> = ({
     },
     {
       id: 'cyberpunk-solana',
-      label: 'Solana DePay',
+      label: 'Cyber Emerald',
       icon: '⚡',
       accentColor: '#10B981',
       pairing: 'unbounded-dm-sans',

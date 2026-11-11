@@ -126,6 +126,7 @@ export const filesToArtifacts = (files: { [path: string]: { content: string } },
   }
 
   let used = 0;
+
   const excerpts: string[] = [];
 
   for (const filePath of paths) {
@@ -144,6 +145,7 @@ export const filesToArtifacts = (files: { [path: string]: { content: string } },
     }
 
     const sanitized = raw.replace(/<\/?bolt(?:Artifact|Action)\b[^>]*>/gi, '');
+
     const slice =
       sanitized.length > budget
         ? `${sanitized.slice(0, budget)}\n/* truncated ${sanitized.length - budget} chars */`
@@ -170,6 +172,7 @@ export function compactFileMap(
   const maxFiles = options?.maxFiles ?? 80;
   const maxChars = options?.maxChars ?? 180000;
   const compact: Record<string, { type: 'file'; content: string; isBinary: boolean; isLocked?: boolean }> = {};
+
   let used = 0;
   let count = 0;
 
@@ -199,4 +202,4 @@ export function compactFileMap(
   }
 
   return compact;
-};
+}

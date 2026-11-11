@@ -1,0 +1,11 @@
+title = "zoth-webgen gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Historical false-positive public strings in older commits"
+commits = [
+  "057012109fa4c286d1e824737963e62b28400b81",
+  "fcc96fe58808a2a39fbfa15532de0240ea63127e",
+]

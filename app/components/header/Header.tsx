@@ -7,10 +7,10 @@ import { AIStudioModal } from '~/components/studio/AIStudioModal';
 import { AgyTerminalModal } from '~/components/terminal/AgyTerminalModal';
 import { SoulMemoryPanel } from '~/components/zoth/SoulMemoryPanel';
 import { ZothBridgeDock } from '~/components/zoth/ZothBridgeDock';
-import { soulPanelOpenAtom } from '~/lib/stores/soul';
 import { ChatDescription } from '~/lib/persistence/ChatDescription.client';
 import { chatStore } from '~/lib/stores/chat';
 import { isProLicensedStore } from '~/lib/stores/license';
+import { soulPanelOpenAtom } from '~/lib/stores/soul';
 import { isAIStudioOpenAtom, pendingPromptAppendAtom } from '~/lib/stores/studioStore';
 import { classNames } from '~/utils/classNames';
 
@@ -38,7 +38,9 @@ export function Header() {
             <span className="font-extrabold text-black text-xs font-mono">⚡</span>
           </div>
           <div className="flex items-baseline gap-1.5 shrink-0 whitespace-nowrap">
-            <span className="hidden sm:inline font-bold text-base tracking-wider text-bolt-elements-textPrimary">ZOTH</span>
+            <span className="hidden sm:inline font-bold text-base tracking-wider text-bolt-elements-textPrimary">
+              ZOTH
+            </span>
             <span className="font-semibold text-xs tracking-widest text-[#D4AF37]">BOLT</span>
             <span className="hidden md:inline-block ml-1 text-[9px] font-mono font-semibold px-1.5 py-0.2 rounded border border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]">
               AI &amp; MOTION ARCHITECT

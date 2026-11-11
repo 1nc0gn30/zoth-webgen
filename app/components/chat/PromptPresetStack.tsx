@@ -38,9 +38,8 @@ export const PromptPresetStack: React.FC<PromptPresetStackProps> = ({ input, onI
   );
 
   const toggle = (preset: PromptPreset) => {
-    const nextIds = selected.includes(preset.id)
-      ? selected.filter((id) => id !== preset.id)
-      : [...selected, preset.id];
+    const nextIds = selected.includes(preset.id) ? selected.filter((id) => id !== preset.id) : [...selected, preset.id];
+
     const nextStacked = nextIds
       .map((id) => PROMPT_PRESETS.find((item) => item.id === id))
       .filter(Boolean) as PromptPreset[];

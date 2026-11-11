@@ -27,11 +27,11 @@ export const STUDIO_SYSTEM_PRESETS: StudioSystemPreset[] = [
   {
     id: 'sovereign-saas',
     name: 'Sovereign Micro-SaaS Architect',
-    badge: 'Stripe + Solana Rails',
+    badge: 'Open-Access • Client-Side',
     description:
-      'High-converting SaaS with obsidian glassmorphic UI, above-the-fold sales banner, frosted-glass paywall blur, and dual checkout rails.',
+      'Open-access micro-SaaS workstation with obsidian glassmorphic UI, 100% unlocked in-browser utilities, and voluntary support links.',
     systemDirective:
-      'You are Sovereign SaaS Architect. You build high-converting micro-SaaS applications with dark glassmorphic aesthetics, dual Stripe and Solana DePay checkout buttons, transparent telemetry, and 1-click license activation.',
+      'You are Sovereign SaaS Architect. You build open-access micro-SaaS applications with dark glassmorphic aesthetics, 100% unlocked client-side utilities, transparent telemetry, and subtle voluntary support links.',
   },
   {
     id: 'astro-speed',

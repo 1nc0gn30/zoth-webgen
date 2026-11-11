@@ -123,6 +123,7 @@ async function chatAction({ context, request }: ActionFunctionArgs) {
         let messageSliceId = 0;
 
         const processedMessages = await mcpService.processToolInvocations(messages, dataStream);
+
         const siteAlreadyLive = resolveSiteAlreadyLive({
           previewLive: Boolean(studioSettings?.siteAlreadyLive),
           workspaceFileCount: filePaths.length,
@@ -321,17 +322,14 @@ async function chatAction({ context, request }: ActionFunctionArgs) {
             const gap = responseNeedsContinue(assembled, chatModeForFinish, { siteAlreadyLive });
 
             const hasCompleteNewSite =
-              assembled.includes('<boltArtifact') &&
-              /<boltAction\b[^>]*\btype=["']start["']/.test(assembled);
+              assembled.includes('<boltArtifact') && /<boltAction\b[^>]*\btype=["']start["']/.test(assembled);
 
             /*
              * A live preview is done unless this pass was cut off mid-file
              * (unclosed) or mid-reply (finishReason length). Do not keep
              * asking for a second start action.
              */
-            const siteDone =
-              gap === null &&
-              (hasCompleteNewSite || (siteAlreadyLive && finishReason !== 'length'));
+            const siteDone = gap === null && (hasCompleteNewSite || (siteAlreadyLive && finishReason !== 'length'));
 
             const proseCutOff = finishReason === 'length' && !siteDone && gap === null;
             const shouldContinue = gap !== null || proseCutOff;
@@ -432,9 +430,7 @@ async function chatAction({ context, request }: ActionFunctionArgs) {
           label: `response-${progressCounter}`,
           status: 'in-progress',
           order: progressCounter++,
-          message: siteAlreadyLive
-            ? 'Applying the follow-up to the live site'
-            : 'Generating the first site artifact',
+          message: siteAlreadyLive ? 'Applying the follow-up to the live site' : 'Generating the first site artifact',
         } satisfies ProgressAnnotation);
 
         const result = await streamText({

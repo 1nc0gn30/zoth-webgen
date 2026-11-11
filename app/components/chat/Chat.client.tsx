@@ -12,9 +12,11 @@ import type { ElementInfo } from '~/components/workbench/Inspector';
 import { useMessageParser, usePromptEnhancer, useShortcuts } from '~/lib/hooks';
 import { useSettings } from '~/lib/hooks/useSettings';
 import { description, useChatHistory } from '~/lib/persistence';
+import { pushBuildLog } from '~/lib/stores/buildLog';
 import { chatStore } from '~/lib/stores/chat';
 import { logStore } from '~/lib/stores/logs';
 import { useMCPStore } from '~/lib/stores/mcp';
+import { soulAtom, memoryAtom, rememberBuild } from '~/lib/stores/soul';
 import { streamingState } from '~/lib/stores/streaming';
 import { studioTelemetryAtom } from '~/lib/stores/studioStore';
 import { supabaseConnection } from '~/lib/stores/supabase';
@@ -26,8 +28,6 @@ import { DEFAULT_MODEL, DEFAULT_PROVIDER, PROMPT_COOKIE_KEY, PROVIDER_LIST } fro
 import { debounce } from '~/utils/debounce';
 import { cubicEasingFn } from '~/utils/easings';
 import { compactFileMap, filesToArtifacts } from '~/utils/fileUtils';
-import { pushBuildLog } from '~/lib/stores/buildLog';
-import { soulAtom, memoryAtom, rememberBuild } from '~/lib/stores/soul';
 import { createScopedLogger, renderLogger } from '~/utils/logger';
 import { createSampler } from '~/utils/sampler';
 import { getTemplates, selectStarterTemplate } from '~/utils/selectStarterTemplate';
@@ -571,6 +571,7 @@ export const ChatImpl = memo(
 
         // If autoSelectTemplate is disabled or template selection failed, proceed with normal message
         pushBuildLog('info', 'Starting a new site', `${model} · ${provider.name}`);
+
         const userMessageText = `[Model: ${model}]\n\n[Provider: ${provider.name}]\n\n${finalMessageContent}`;
         const attachments = uploadedFiles.length > 0 ? await filesToAttachments(uploadedFiles) : undefined;
 
@@ -601,6 +602,7 @@ export const ChatImpl = memo(
       if (error != null) {
         const last = messages[messages.length - 1];
         const lastText = typeof last?.content === 'string' ? last.content : '';
+
         const keepCompletedSite =
           last?.role === 'assistant' &&
           (lastText.includes('</boltArtifact>') || lastText.includes('<boltAction') || lastText.length > 80);
@@ -626,6 +628,7 @@ export const ChatImpl = memo(
           : previewLive
             ? `\n<workspace_status>The preview is already live. Apply this change to the existing project. Do not scaffold from scratch. Do not add a second start action.</workspace_status>\n`
             : '';
+
       const messageText = `[Model: ${model}]\n\n[Provider: ${provider.name}]\n\n${workspaceNote}${finalMessageContent}`;
 
       const attachmentOptions =

@@ -34,12 +34,12 @@ export default function TermsPage() {
 
           <div className="space-y-8 text-sm text-bolt-elements-textSecondary leading-relaxed">
             <section className="space-y-3">
-              <h2 className="text-lg font-bold text-[#D4AF37]">1. Lifetime Commercial License Grant</h2>
+              <h2 className="text-lg font-bold text-[#D4AF37]">1. Open-Source MIT Commercial License Grant</h2>
               <p>
-                Upon purchasing a lifetime license to <strong>Zoth Bolt</strong> via Stripe or DePay Solana,
-                1nc0gn30 • NullAI grants you a perpetual, non-exclusive, worldwide commercial license to use the
-                software to architect, generate, compile, and export web applications for personal, commercial, client,
-                and internal enterprise projects.
+                <strong>Zoth Bolt</strong> is open-source software distributed under the MIT License. 1nc0gn30 • NullAI
+                grants you a perpetual, non-exclusive, worldwide commercial license to use the software to architect,
+                generate, compile, and export web applications for personal, commercial, client, and internal enterprise
+                projects with zero paywalls.
               </p>
             </section>
 
@@ -47,7 +47,8 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-[#D4AF37]">2. 100% Client-Side In-Browser Execution</h2>
               <p>
                 Zoth Bolt operates client-side inside your browser via WebContainer technology. You acknowledge that
-                code execution, AST transformations, and file generation take place locally on your hardware. 1nc0gn30 • NullAI does not operate backend servers that host or execute your generated applications.
+                code execution, AST transformations, and file generation take place locally on your hardware. 1nc0gn30 •
+                NullAI does not operate backend servers that host or execute your generated applications.
               </p>
             </section>
 
@@ -69,16 +70,16 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-[#D4AF37]">4. Ownership of Generated Output</h2>
               <p>
                 You retain 100% complete, unencumbered ownership and intellectual property rights over any source code,
-                media, components, configurations, and applications synthesized or exported through Zoth Bolt. 1nc0gn30 • NullAI claims zero royalties, equity, or rights in your creations.
+                media, components, configurations, and applications synthesized or exported through Zoth Bolt. 1nc0gn30
+                • NullAI claims zero royalties, equity, or rights in your creations.
               </p>
             </section>
 
             <section className="space-y-3">
               <h2 className="text-lg font-bold text-[#D4AF37]">5. Attribution & Heritage</h2>
               <p>
-                Zoth Bolt is engineered by 1nc0gn30 • NullAI (@1nc0gn30) as part of the NullAI Platform. The
-                platform architecture is inspired by Bolt and WebContainer open-source foundations under the MIT
-                License.
+                Zoth Bolt is engineered by 1nc0gn30 • NullAI (@1nc0gn30) as part of the NullAI Platform. The platform
+                architecture is inspired by Bolt and WebContainer open-source foundations under the MIT License.
               </p>
             </section>
           </div>
