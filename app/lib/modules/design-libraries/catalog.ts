@@ -2058,12 +2058,11 @@ export const COMMODITIES_AND_EFFECTS: CatalogItem[] = [
     badge: 'Conversion Engine',
   },
   {
-    id: 'founding-urgency-banner',
-    name: 'Founding Member Urgency Banner',
+    id: 'release-status-banner',
+    name: 'Release Announcement Status Banner',
     category: 'commodity',
-    description:
-      'Top glass bar with live seat counter, discount strikethrough ($19 vs $79), and pulsing live status badge.',
-    tags: ['urgency', 'banner', 'founding-members', 'sales'],
+    description: 'Top glass bar with version badge, changelog link, and pulsing live deployment status indicator.',
+    tags: ['announcement', 'banner', 'release', 'status'],
   },
   {
     id: 'interactive-price-slider',
